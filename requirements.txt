@@ -1,0 +1,4 @@
+django==1.11.3
+djangorestframework==3.6.3
+gunicorn==19.7.1
+requests==2.18.1

@@ -1,0 +1,18 @@
+{
+  "name": "Brightwheel Email Service",
+  "description": "Redundant email API service",
+  "env": {
+    "DJANGO_SECRET_KEY": {
+      "description": "A randomly generated secret to secure your Django installation",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "sendgrid:starter",
+    "mailgun:starter",
+    "papertrail:choklad"
+  ],
+  "scripts": {
+    "postdeploy": "python manage.py migrate --noinput"
+  }
+}
